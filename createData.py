@@ -6,7 +6,7 @@ from pyspark.sql.functions import col
 spark = SparkSession.builder \
     .appName("Read API Data") \
     .getOrCreate()
-
+#Api requesting using API
 url = "https://disease.sh/v3/covid-19/countries/india,france,germany,brazil,south%20korea,japan,italy,uk,russia,turkey,spain,australia,vietnam,taiwan,argentina,netherlands,mexico,iran,indonesia,"
 
 
