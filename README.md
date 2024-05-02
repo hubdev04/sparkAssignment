@@ -1,19 +1,9 @@
 ##  Spark COVID-19 Data Analysis
-<br>
-1.createData - creates the covidData.csv file
-<br>
-2.Q2usingcsv - gives the soltuion for Q2 using csv file created from API
-<br>
-3.covidDataApi.py - creates APIs for csv data and each and every question of Q2.from this api we can call data using requests.
-<br>
-4.verifyCovidDataApi.py - verify all the APIs created in covidDataApi.py and calling Apis and getting results.
-
+This project fetches COVID-19 data for selected countries from the [disease.sh API](https://disease.sh/docs/#/COVID-19%3A%20Worldometers/get_v3_covid_19_countries) and performs data analysis using PySpark DataFrame. Additionally, it exposes an API using Flask to display the analyzed data.
 
 ## Usage
 
-1. Open the createData.py which creates the covidData.csv.
-2. Run the python programme  Q2usingcsv.py to fetch the  data from  csv file  and  get data as result using spark.
-3. Open the covidDataApi.py to create API for all the questions mentioned.
+1. Open the main.py which creates the covidData.csv and create All Apis and return results of all questions.
 
 ## Dependencies
 
@@ -23,3 +13,35 @@
 - Spark
 - flask
 - Other dependencies as required (specified within the file)
+
+## How to Use
+
+To run the project locally, follow these steps:
+
+```bash
+# Clone the repository:
+git clone <repository-url>
+
+# Navigate to the project directory:
+cd <project-directory>
+
+# Install the required packages using pip:
+pip install -r requirements.txt
+
+# Run the Flask application:
+python src/covid_api.py
+
+# Run the Main application:
+python main.py
+```
+## Folder Structure
+
+    .
+    ├── data 
+        ├──output                # data as csv file is sotred
+    ├── logs                    # contains logs files
+    ├── src                     # contains all python  file which creates Apis and query results from csv file.
+    ├── config.json              # contains configuration details
+    ├── main.py                  #main python file
+    ├── requirements.txt        # contains required dependencies versions.
+    └── README.md
